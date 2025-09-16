@@ -36,11 +36,13 @@
 <script setup lang="ts">
 import { ref, computed } from 'vue';
 
-const props = defineProps<{
+const props = withDefaults(defineProps<{
   nodeKey?: string | number;
   data?: any;
-  depth: number;
-}>();
+  depth?: number;
+}>(), {
+  depth: 0
+});
 
 const isOpen = ref(props.depth < 1);
 
