@@ -40,22 +40,6 @@ In your PrezUI project, add the following to your `nuxt.config.ts` file:
 ```
 __Note:__ the next time you run your project, the dependencies in the tests layer package.json will be installed automatically.
 
-**Important:** If you encounter PrismJS import errors, add the following Vite configuration to your project's `nuxt.config.ts`:
-
-```javascript
-export default defineNuxtConfig({
-  // ... your existing config
-  vite: {
-    optimizeDeps: {
-      include: ["prismjs"]
-    },
-    ssr: {
-      noExternal: ["prismjs"]
-    }
-  }
-})
-```
-
 Then preview your theme by running:
 ```bash
 pnpm dev

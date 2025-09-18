@@ -2,7 +2,11 @@
 
 const { addLog } = useLog();
 const exampleCode = 
-`<template>
+`<script setup lang="ts">
+const { addLog } = useLog();
+<\/script>
+
+<template>
   <TestPanel heading="My Test" description="A new test case">
     <p>These test pages are a simple way to test, build and demonstrate functionality in isolation.</p>
     <h2 class="text-lg font-bold mt-4">Helper Test Components</h2>
