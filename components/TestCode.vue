@@ -3,7 +3,6 @@
 </template>
 
 <script setup>
-import * as Prism from 'prismjs'
 import 'prismjs/themes/prism.css'
 import 'prismjs/components/prism-markup'
 
@@ -20,9 +19,15 @@ const props = defineProps({
 
 const codeBlock = ref(null)
 
-onMounted(() => {
+onMounted(async () => {
   if (codeBlock.value) {
-    Prism.highlightElement(codeBlock.value)
+    try {
+      // Dynamic import to ensure PrismJS loads properly in extended layers
+      const Prism = await import('prismjs')
+      Prism.highlightElement(codeBlock.value)
+    } catch (error) {
+      console.error('Failed to load PrismJS:', error)
+    }
   }
 })
 </script>
