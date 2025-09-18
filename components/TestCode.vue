@@ -3,7 +3,7 @@
 </template>
 
 <script setup>
-import Prism from 'prismjs'
+import * as Prism from 'prismjs'
 import 'prismjs/themes/prism.css'
 import 'prismjs/components/prism-markup'
 

@@ -13,7 +13,10 @@ export default defineNuxtConfig({
     ],
     vite: {
         optimizeDeps: {
-            include: ["@triply/yasgui"]
+            include: ["@triply/yasgui", "prismjs"]
+        },
+        ssr: {
+            noExternal: ["prismjs"]
         }
     },
 });
