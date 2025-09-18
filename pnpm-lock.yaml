@@ -38,6 +38,9 @@ importers:
       nuxt-lucide-icons:
         specifier: ^1.0.5
         version: 1.0.5(magicast@0.3.5)(vue@3.5.21(typescript@5.9.2))
+      prismjs:
+        specifier: ^1.30.0
+        version: 1.30.0
       radix-vue:
         specifier: ^1.9.10
         version: 1.9.17(vue@3.5.21(typescript@5.9.2))
@@ -4023,6 +4026,10 @@ packages:
 
   prez-ui@4.1.4:
     resolution: {integrity: sha512-qgNGrOuoaJgtIqRK0s6SmUebSztLgNwEzAglmr8zdTYJXgy+BqKTH6PyIDBiGipMEKzGJ1IwihSNcjGx7CRPfw==}
+
+  prismjs@1.30.0:
+    resolution: {integrity: sha512-DEvV2ZF2r2/63V+tK8hQvrR2ZGn10srHbXviTlcv7Kpzw8jWiNTqbVgjO3IY8RxrrOUF8VPMQQFysYYYv0YZxw==}
+    engines: {node: '>=6'}
 
   process-nextick-args@2.0.1:
     resolution: {integrity: sha512-3ouUOpQhtgrbOa17J7+uxOTpITYWaGP7/AhoR3+A+/1e9skrzelGi/dXzEYyvbxubEF6Wn2ypscTKiKJFFn1ag==}
@@ -9525,6 +9532,8 @@ snapshots:
       - ts-node
       - typescript
       - vitest
+
+  prismjs@1.30.0: {}
 
   process-nextick-args@2.0.1: {}
 

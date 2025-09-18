@@ -1,4 +1,19 @@
 <script setup lang="ts">
+/*
+        <TestMatrix
+            :data="{
+                header: 'Feature 01',
+                items: [
+                    { item: 'Test 1', status: 'pass', links: [{ title: 'Test 1A', link: '/tests/01-test-a' }, { title: 'Test 1B', link: '/tests/01-test-b' }] },
+                    { item: 'Test 2', status: 'fail', links: [{ title: 'Test 2A', link: '/tests/02-test-a' }, { title: 'Test 2B', link: '/tests/02-test-b' }] },
+                ]
+            }"
+        />
+*/
+
+
+
+
 import { cn } from '@/lib/utils'
 
 type TestStatus = 'pass' | 'fail' | 'pending' | 'skip' | 'disabled'
