@@ -13,7 +13,8 @@ const groupedTests = computed(() => {
     )
     .map((route) => {
       const name = route.path.split('/').pop() || ''
-      const segments = name.split('-')
+      const decodedName = decodeURIComponent(name)
+      const segments = decodedName.split('-')
       const groupName = segments[0] || ''
       const remainingName = segments.slice(1).join('-')
       const title = remainingName
@@ -23,8 +24,8 @@ const groupedTests = computed(() => {
       return {
         path: route.path,
         name: title,
-        group: groupName.toUpperCase(),
-        originalName: name,
+        group: groupName,
+        originalName: decodedName,
       }
     })
     .sort((a, b) => a.originalName.localeCompare(b.originalName))
